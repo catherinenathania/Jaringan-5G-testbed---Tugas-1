@@ -44,9 +44,36 @@ sudo ./setup-k3s-environment-calico.sh
 ```
 <img width="821" height="486" alt="image" src="https://github.com/user-attachments/assets/a5a894c3-4dfc-42f0-81ee-b2e5ef3a6eac" />
 <img width="812" height="547" alt="image" src="https://github.com/user-attachments/assets/23123578-95c9-4b12-bf92-06ec6597a6f8" />
+<img width="848" height="399" alt="image" src="https://github.com/user-attachments/assets/74251eda-7b0c-4ba2-940b-601e722b0838" />
+<img width="725" height="177" alt="image" src="https://github.com/user-attachments/assets/6367608f-de91-4d6c-b990-04375448be8d" />
 
 
 .........................
+<img width="815" height="573" alt="image" src="https://github.com/user-attachments/assets/33a4af04-928e-41b4-9700-56cf5d3c7b91" />
+
+<img width="814" height="498" alt="image" src="https://github.com/user-attachments/assets/3029f29b-0e36-4bc9-957d-7c77f7d29d37" />
+
+ifnotpresent
+<img width="405" height="509" alt="image" src="https://github.com/user-attachments/assets/f28cd2ab-6633-4e6c-a5ae-977832e97c0b" />
+<img width="527" height="562" alt="image" src="https://github.com/user-attachments/assets/d6602401-f26a-4979-b0a3-eba32adba35b" />
+
+<img width="819" height="468" alt="image" src="https://github.com/user-attachments/assets/7cfe7833-aff2-4a66-a3e2-de5643d1ed3c" />
+### Cleanup & Restart:
+
+```bash
+kubectl delete all --all -n open5gs
+kubectl delete namespace open5gs
+sleep 10
+kubectl create namespace open5gs
+```
+Deploy Ulang (dengan Koreksi Policy):
+
+```bash
+kubectl apply -f 01-configmaps/ -n open5gs
+kubectl apply -f 02-control-plane/ -n open5gs
+kubectl apply -f 03-session-mgmt/ -n open5gs
+kubectl apply -f 04-user-plane/ -n open5gs
+```
 <img width="819" height="485" alt="image" src="https://github.com/user-attachments/assets/6f1e4f90-a32a-473a-b252-30a1c293b3e8" />
 
 
