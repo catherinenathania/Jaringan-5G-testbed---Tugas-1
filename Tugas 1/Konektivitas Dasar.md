@@ -88,7 +88,7 @@ kubectl apply -f 04-user-plane/ -n open5gs
 
 ![WhatsApp Image 2025-11-23 at 18 52 21_9d92518a](https://github.com/user-attachments/assets/3c1965f4-f564-4ce4-86df-7401bfa7089f)
 
-# Lihat nama image di dalam file YAML
+### Lihat nama image di dalam file YAML
 
 ```bash
 grep "image:" ~/Open5GS-Testbed/open5gs/open5gs-k3s-calico/02-control-plane/nrf.yaml
@@ -106,7 +106,7 @@ sudo k3s crictl pull open5gs/open5gs:2.7.0
 <img width="815" height="536" alt="image" src="https://github.com/user-attachments/assets/efdb3f2b-aba3-4864-ad68-8994e07bf9eb" />
 
 
-###Jalankan script build (ini mungkin memakan waktu 5-10 menit):
+### Jalankan script build (ini mungkin memakan waktu 5-10 menit):
 
 ```bash
 ./build-import-containers.sh
