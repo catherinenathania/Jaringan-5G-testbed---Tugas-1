@@ -54,7 +54,6 @@ sudo ./setup-k3s-environment-calico.sh
 <img width="725" height="177" alt="image" src="https://github.com/user-attachments/assets/6367608f-de91-4d6c-b990-04375448be8d" />
 
 
-.........................
 <img width="815" height="573" alt="image" src="https://github.com/user-attachments/assets/33a4af04-928e-41b4-9700-56cf5d3c7b91" />
 
 <img width="814" height="498" alt="image" src="https://github.com/user-attachments/assets/3029f29b-0e36-4bc9-957d-7c77f7d29d37" />
