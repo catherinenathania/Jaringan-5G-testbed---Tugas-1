@@ -58,7 +58,7 @@ sudo ./setup-k3s-environment-calico.sh
 
 <img width="814" height="498" alt="image" src="https://github.com/user-attachments/assets/3029f29b-0e36-4bc9-957d-7c77f7d29d37" />
 
-ifnotpresent
+### ImagePullPolicy: IfNotPresent
 
 <img width="405" height="509" alt="image" src="https://github.com/user-attachments/assets/f28cd2ab-6633-4e6c-a5ae-977832e97c0b" />
 
