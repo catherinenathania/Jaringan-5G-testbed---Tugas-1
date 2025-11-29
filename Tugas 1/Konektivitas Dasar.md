@@ -67,6 +67,7 @@ ifnotpresent
 <img width="527" height="562" alt="image" src="https://github.com/user-attachments/assets/d6602401-f26a-4979-b0a3-eba32adba35b" />
 
 <img width="819" height="468" alt="image" src="https://github.com/user-attachments/assets/7cfe7833-aff2-4a66-a3e2-de5643d1ed3c" />
+
 ### Cleanup & Restart:
 
 ```bash
@@ -85,15 +86,39 @@ kubectl apply -f 04-user-plane/ -n open5gs
 ```
 <img width="819" height="485" alt="image" src="https://github.com/user-attachments/assets/6f1e4f90-a32a-473a-b252-30a1c293b3e8" />
 
-
-
-![WhatsApp Image 2025-11-23 at 18 52 20_f4244968](https://github.com/user-attachments/assets/8128a824-924c-41d9-8c1e-42080ca49977)
-
-![WhatsApp Image 2025-11-23 at 18 52 21_4b8969cf](https://github.com/user-attachments/assets/a6b2666b-daf2-425b-96cf-8dd89a29d47a)
-
-
-![WhatsApp Image 2025-11-23 at 18 52 21_8562a868](https://github.com/user-attachments/assets/23890367-ea90-468b-811b-b4c30a1a38f2)
-
 ![WhatsApp Image 2025-11-23 at 18 52 21_9d92518a](https://github.com/user-attachments/assets/3c1965f4-f564-4ce4-86df-7401bfa7089f)
 
-![WhatsApp Image 2025-11-23 at 18 52 20_6dc0d809](https://github.com/user-attachments/assets/dfa531e3-01ed-4e4f-8d15-81e73a6e65df)
+# Lihat nama image di dalam file YAML
+
+```bash
+grep "image:" ~/Open5GS-Testbed/open5gs/open5gs-k3s-calico/02-control-plane/nrf.yaml
+```
+
+Outputnya biasanya seperti image: open5gs/open5gs:2.7.0 atau image: gradiant/open5gs.
+
+Asumsikan nama image dari langkah 2 adalah open5gs/open5gs:2.7.0 (Ganti jika berbeda):
+
+```bash
+# Tarik image secara manual (GANTI nama image sesuai hasil Langkah 2)
+sudo k3s crictl pull open5gs/open5gs:2.7.0
+```
+
+<img width="815" height="536" alt="image" src="https://github.com/user-attachments/assets/efdb3f2b-aba3-4864-ad68-8994e07bf9eb" />
+
+
+###Jalankan script build (ini mungkin memakan waktu 5-10 menit):
+
+```bash
+./build-import-containers.sh
+```
+
+<img width="820" height="474" alt="image" src="https://github.com/user-attachments/assets/bd017820-587d-492f-8b0c-4c7d07a7e991" />
+
+Cek Status Tunggu 1 menit, lalu:
+
+```bash
+kubectl get pods -n open5gs -o wide
+```
+
+<img width="815" height="533" alt="image" src="https://github.com/user-attachments/assets/4043b8fa-2875-4b8f-908f-200b0d2d9b0f" />
+
